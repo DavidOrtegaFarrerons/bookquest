@@ -1,3 +1,7 @@
+controllers:
+    resource: '../../src'
+    type: attribute
+
 when@dev:
     _errors:
         resource: '@FrameworkBundle/Resources/config/routing/errors.php'
