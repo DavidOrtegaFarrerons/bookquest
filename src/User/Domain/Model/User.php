@@ -2,8 +2,6 @@
 
 namespace App\User\Domain\Model;
 
-use http\Exception\InvalidArgumentException;
-
 class User
 {
     private UserId $id;
@@ -23,12 +21,12 @@ class User
     {
         $trimmedFirstName = trim($firstName);
         if ($trimmedFirstName === '' || strlen($trimmedFirstName) < 3) {
-            throw new \RuntimeException("First name must be longer than 2 characters");
+            throw new \InvalidArgumentException("First name must be longer than 2 characters");
         }
 
         $trimmedLastName = trim($lastName);
         if ($trimmedLastName === '' || strlen($trimmedLastName) < 3) {
-            throw new \RuntimeException("Last name must be longer than 2 characters");
+            throw new \InvalidArgumentException("Last name must be longer than 2 characters");
         }
 
 
