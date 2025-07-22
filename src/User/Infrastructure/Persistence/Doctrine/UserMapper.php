@@ -23,7 +23,7 @@ class UserMapper
     public static function toDomain(UserRecord $r) : User
     {
         return new User(
-            new UserId($r->id),
+            UserId::create($r->id),
             new Email($r->email),
             $r->firstName,
             $r->lastName,
