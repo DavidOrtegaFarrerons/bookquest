@@ -8,8 +8,8 @@ use App\User\Domain\Model\UserId;
 
 class RegisterUserResponse
 {
-    private UserId $id;
-    private Email $email;
+    public UserId $id;
+    public Email $email;
 
     /**
      * @param User $user
